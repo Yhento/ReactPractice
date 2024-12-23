@@ -30,19 +30,19 @@ function Intro() {
 
 function SkillList() {
   return (
-    <ul className="skill-list">
+    <div className="skill-list">
       <Skill name="HTML&CSS" emoji="🙏" background_color="blue" />
       <Skill name="ASP.NET Core" emoji="🙏" background_color="red" />
       <Skill name="Javascript" emoji="🙏" background_color="yellow" />
-    </ul>
+    </div>
   );
 }
 
-function Skill({ name, emoji, background_color }) {
+function Skill(props) {
   return (
-    <li className="skill" style={{ backgroundColor: background_color }}>
-      {name} {emoji}
-    </li>
+    <span className="skill" style={{ backgroundColor: props.background_color }}>
+      {props.name} {props.emoji}
+    </span>
   );
 }
 
